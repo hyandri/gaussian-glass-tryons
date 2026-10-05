@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glasses try-on</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="title">
+  <h1>Virtual glasses try-on on a single-photo 3D head</h1>
+  <div>FaceLift Gaussian splat · MediaPipe landmarks · auto-fit</div>
+</div>
+
+<div id="panel">
+  <h3>Head</h3>
+  <select id="headSelect"></select>
+  <label><input type="checkbox" id="dotsToggle"> show landmarks</label>
+
+  <div class="dev">
+    <h3>Glasses fit</h3>
+    <button id="autoBtn">Re-fit</button>
+    <button id="resetBtn">Reset glasses</button>
+
+    <h3>Position</h3>
+    <div id="posRows"></div>
+    <h3>Rotation (degrees)</h3>
+    <div id="rotRows"></div>
+    <h3>Scale</h3>
+    <div id="scaleRow"></div>
+
+    <h3>Head orientation</h3>
+    <button id="flipX">Flip X 180</button>
+    <button id="flipY">Flip Y 180</button>
+    <button id="flipZ">Flip Z 180</button>
+  </div>
+
+  <h3>Camera views</h3>
+  <button data-view="front">+Z</button>
+  <button data-view="back">-Z</button>
+  <button data-view="side">+X</button>
+  <button data-view="top">Top</button>
+
+  <h3>Webcam head pose</h3>
+  <button id="camBtn">Start webcam</button>
+  <button id="camCalBtn">Calibrate neutral</button>
+  <label><input type="checkbox" id="camMirror" checked> mirror (like a mirror)</label>
+  <video id="camVideo" playsinline muted></video>
+  <div id="camStatus" class="dev">webcam off</div>
+
+  <div id="status">Loading...</div>
+  <label id="devLabel"><input type="checkbox" id="devToggle"> dev</label>
+</div>
+
+<div id="shop">
+  <div class="brand" id="shopBrand"></div>
+  <div class="sub" id="shopSub"></div>
+  <div id="shopList"></div>
+</div>
+
+<!-- Libraries are self-hosted in vendor/ (works offline). App code is in src/, entry point src/main.js. -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three.module.js",
+    "three/addons/": "./vendor/addons/",
+    "@sparkjsdev/spark": "./vendor/spark.module.js"
+  }
+}
+</script>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

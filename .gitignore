@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 __pycache__/
 *.pyc
 .venv/
@@ -5,3 +6,18 @@ venv/
 .env
 .idea/
 .vscode/
+=======
+# AI / working notes (keep README.md)
+CLAUDE.md
+AGENT_GUIDELINES.md
+TASKS.md
+PROJECT_OVERVIEW.md
+ARCHITECTURE.md
+
+# Python
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+>>>>>>> origin/frontend
